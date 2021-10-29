@@ -86,13 +86,13 @@ for valasz in megoldasok:
     pont = 0
     while x < len(valasz):
         if valasz[x] == megoldas[x]:
-            if x <= 5:
+            if x <= 4:
                 pont += 3
-            elif x >= 6 and x <= 10:
+            elif x >= 5 and x <= 9:
                 pont += 4
-            elif x >= 11 and x <= 13:
+            elif x >= 10 and x <= 12:
                 pont += 5
-            elif x == 14:
+            elif x == 13:
                 pont += 6
         x += 1
     pontok.append(pont)
