@@ -1,5 +1,4 @@
 # 1. Olvassa be és tárolja el a valaszok.txt szöveges állomány adatait!
-input
 f = open ("valaszok.txt", "r")
 valaszok = []
 for line in f:
