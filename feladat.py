@@ -1,5 +1,5 @@
-# 1. Olvassa be és tárolja el a valaszok.txt szöveges állomány adatait!
-f = open ("valaszok.txt", "r")
+# 1.
+f = open("valaszok.txt", "r")
 valaszok = []
 for line in f:
     valaszok.append(line)
@@ -8,12 +8,11 @@ f.close()
 megoldas = valaszok[0]
 valaszok = valaszok[1:]
 
-# 2. Jelenítse meg a képernyőn a mintának megfelelően, hány versenyző vett részt a tesztersenyen!
+# 2.
 
 print(f"2.feladat: A versenyen {len(valaszok)} versenyző indult")
 
-# 3. Kérje be egy versenyző azonosítóját és jelenítse meg a mintának megfelelően a hozzá eltárolt válaszokat! Ha nincs
-#ilyen kód, akkor jelenítse meg: Ilyen kóddal nem indult versenyző.
+# 3.
 
 jatekosMegoldasa = ""
 azonosito = input("3.feladat: Kérem adja meg egy versenyző azonosítóját: ")
@@ -26,9 +25,7 @@ if jatekosMegoldasa == "":
     valasz = valaszok[0]
     jatekosMegoldasa = valasz[6:]
 
-# 4. Írassa ki a képernyőre a helyes megoldást! A helyes megoldás alatti sorba tegyen "+" jelet, ha az adott feladatot az
-#előző feladatban kiválasztott versenyző eltalálta, egyébként egy szóközt. A kiíratást a mintának megfelelő módon
-#alakítsa ki! Ha olyan kód volt megadva, ami nem szerepel a listában, úgy az 1. versenyző megoldását vizsgálja!
+# 4.
 
 helyes = ""
 x = 0
@@ -40,8 +37,7 @@ while x < len(megoldas)-1:
     x += 1
 print(f"4.feladat: A helyes megoldás:\n{megoldas}{helyes}")
 
-# 5. Kérje be egy feladat sorszámát, majd határozza meg, hány versenyző adott a feladatra helyes megoldást, és ez a
-#versenyzők hány százaléka! A százalékos eredményt a mintának megfelelően, 2 tizedesjegy pontossággal írassa ki.
+# 5.
 
 feladatszama = 0
 while feladatszama == 0:
@@ -63,11 +59,7 @@ for valasz in valaszok:
 
 print(f"5.feladat: A feladatra {jomegoldasok}fő, a versenyzők {jomegoldasok/len(valaszok):.2%}-a adott helyes választ.")
 
-
-# 6. A verseny feladatai nem egyenlő nehézségűek: az 1-5. feladat 3 pontot, a 6-10. feladat 4 pontot, a 11-13. feladat
-#5 pontot, a 14. feladat 6 pontot ér. Határozza meg az egyes versenyzők pontszámát, és a listát írassa ki a pontok.txt
-#nevű állományba! Az állomány minden sora egy versenyző kódját, majd szóközzzel elválasztva az általa elért pontszámot
-#tartalmazza!
+# 6.
 
 g = open("pontok.txt", "w")
 megoldasok = []
@@ -102,9 +94,7 @@ while x < len(azonositok)-1:
     x += 1
 g.close()
 
-# 7. A versenyen a 3 legmagasabb pontszámot elérő összes versenyzőt díjazzák. Például 5 indulónál előfordulhat, hogy 3 db.
-#első és 2 db. második díjat adnak ki. Így megtörténhet az is, hogy nem kerül sor mindegyik díj kiadására. Írassa ki
-#a mintának megfelelően a képernyőre a díjazottak kódját és pontszámát, pontszám szerint csökkenő sorrendben!
+# 7.
 
 print("7.feladat: A verseny legjobbjai:")
 elso = max(pontok)
@@ -132,4 +122,3 @@ for data in g:
     if int(data[6:]) == int(harmadik):
         print(f"3. díj ({harmadik}): {data[:5]}")
 g.close()
-
